@@ -163,36 +163,14 @@
         </section>
 
         <section id="contact" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6 max-w-2xl text-center">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
                  <h2 class="text-3xl md:text-4xl font-bold text-white">Entrons en <span class="gradient-text">contact</span></h2>
-                 <p id="contact-intro" class="text-gray-400 mt-4 text-lg mb-12">
-                     Une question ? Un projet en tête ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+                 <p class="text-gray-400 mt-4 text-lg">
+                     Pour toute question ou pour discuter d'un projet, n'hésitez pas à nous écrire à l'adresse suivante. Nous serons ravis d'échanger avec vous.
                  </p>
-                 <div id="contact-form-container">
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label for="name" class="sr-only">Nom</label>
-                            <input type="text" id="name" name="name" required placeholder="Votre nom" class="form-input w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
-                        </div>
-                        <div>
-                            <label for="email" class="sr-only">Courriel</label>
-                            <input type="email" id="email" name="email" required placeholder="Votre courriel" class="form-input w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
-                        </div>
-                        <div>
-                            <label for="message" class="sr-only">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Votre message..." class="form-input w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full text-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
-                                Envoyer le message
-                            </button>
-                        </div>
-                    </form>
-                 </div>
-                 <div id="confirmation-message" class="hidden text-white text-center p-8 bg-gray-800 rounded-lg">
-                    <h3 class="text-2xl font-bold text-green-400 mb-4">Merci !</h3>
-                    <p class="text-gray-300">Votre message a été préparé. Vous allez être redirigé vers votre application de messagerie pour finaliser l'envoi.</p>
-                </div>
+                 <p class="mt-8 text-xl text-indigo-400">
+                    info@solutionquantic.com
+                 </p>
             </div>
         </section>
 
@@ -254,46 +232,6 @@
                 camera.updateProjectionMatrix(); 
                 renderer.setSize(window.innerWidth, window.innerHeight); 
             });
-
-            // --- Logique de soumission du formulaire de contact ---
-            const contactFormContainer = document.getElementById('contact-form-container');
-            const contactForm = document.getElementById('contact-form');
-            const confirmationMessage = document.getElementById('confirmation-message');
-            const contactIntro = document.getElementById('contact-intro');
-            
-            if(contactForm) {
-                contactForm.addEventListener('submit', (event) => {
-                    event.preventDefault(); // Empêche le rechargement de la page
-
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const message = document.getElementById('message').value;
-
-                    // Cacher le formulaire et le texte d'intro
-                    contactFormContainer.classList.add('hidden');
-                    contactIntro.classList.add('hidden');
-
-                    // Afficher le message de confirmation
-                    confirmationMessage.classList.remove('hidden');
-
-                    // Préparer le lien mailto
-                    const subject = `Nouveau message de ${name} via SolutionQuantic.com`;
-                    const body = `Nom: ${name}\nCourriel: ${email}\n\nMessage:\n${message}`;
-                    const mailtoLink = `mailto:info@solutionquantic.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                    
-                    // Rediriger après un court délai pour que l'utilisateur puisse lire le message
-                    setTimeout(() => {
-                        window.location.href = mailtoLink;
-                        // Optionnellement, ré-afficher le formulaire après un plus long délai
-                        setTimeout(() => {
-                            contactFormContainer.classList.remove('hidden');
-                            contactIntro.classList.remove('hidden');
-                            confirmationMessage.classList.add('hidden');
-                            contactForm.reset();
-                        }, 5000); // Ré-affiche le formulaire après 5 secondes
-                    }, 2500); // 2.5 secondes de délai
-                });
-            }
         });
     </script>
 </body>
