@@ -16,6 +16,7 @@
         #hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
         .hero-content { position: relative; z-index: 1; }
         .timeline-item::before { content: ''; position: absolute; left: -31px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background-color: white; border: 4px solid #4f46e5; z-index: 1; }
+        .form-input:focus { box-shadow: 0 0 0 2px #4f46e5; }
     </style>
 </head>
 <body class="text-gray-800">
@@ -24,7 +25,7 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
                 <svg class="h-9 w-9 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
                 </svg>
                 <div>
                     <span class="text-2xl font-bold text-gray-800">Solution <span class="text-indigo-600">Quantic</span></span>
@@ -35,9 +36,10 @@
                 <a href="#features" class="text-gray-600 hover:text-indigo-600">Fonctionnalités</a>
                 <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600">Comment ça marche</a>
                 <a href="#pricing" class="text-gray-600 hover:text-indigo-600">Nos Plans</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="https://huggingface.co/spaces/Zaffew/SolutionQuantic" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition duration-300 font-semibold">Lancer l'application</a>
+                <a href="#" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition duration-300 font-semibold">Lancer l'application</a>
             </div>
         </nav>
     </header>
@@ -48,7 +50,7 @@
             <div class="hero-content container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">L'optimisation d'horaires, <br>propulsée par l'IA <span class="gradient-text">Hybride-Quantique</span>.</h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">Notre intelligence artificielle analyse des millions de possibilités pour générer l'horaire optimal en quelques secondes, en respectant vos contraintes de coûts, de compétences et de préférences.</p>
-                <a href="https://huggingface.co/spaces/Zaffew/SolutionQuantic" class="bg-indigo-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-indigo-600 transition duration-300 transform hover:scale-105">Commencer gratuitement</a>
+                <a href="#" class="bg-indigo-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-indigo-600 transition duration-300 transform hover:scale-105">Lancer l'application</a>
             </div>
         </section>
 
@@ -94,54 +96,58 @@
                     <h2 class="text-3xl md:text-4xl font-bold">Des plans alignés sur votre croissance</h2>
                     <p class="text-gray-600 mt-2">Commencez gratuitement et débloquez la puissance dont vous avez besoin, quand vous en avez besoin.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto items-stretch">
+                    <!-- Plan Gratuit -->
                     <div class="border rounded-lg p-8 flex flex-col transition hover:shadow-lg">
                         <h3 class="text-2xl font-bold text-center">Gratuit</h3>
-                        <p class="text-center text-gray-500 mb-4 h-12">Idéal pour tester et pour les très petites équipes.</p>
+                        <p class="text-center text-gray-500 mb-4 min-h-[3rem]">Idéal pour tester et pour les très petites équipes.</p>
                         <p class="text-5xl font-bold text-center my-4">0<span class="text-lg font-normal text-gray-500">$/mois</span></p>
                         <ul class="space-y-4 flex-grow text-sm">
                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Jusqu'à <strong class="font-semibold">5 employés</strong></span></li>
                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Planification de base</span></li>
                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Solveur Classique</span></li>
                         </ul>
-                        <a href="https://huggingface.co/spaces/Zaffew/SolutionQuantic" class="mt-8 w-full text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300">Commencer</a>
+                        <a href="#" class="mt-auto pt-6 w-full text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300">Lancer l'application</a>
                     </div>
+                    <!-- Plan Essentiel -->
                     <div class="border rounded-lg p-8 flex flex-col transition hover:shadow-lg">
                         <h3 class="text-2xl font-bold text-center">Essentiel</h3>
-                        <p class="text-center text-gray-500 mb-4 h-12">Pour les PME qui veulent optimiser leurs coûts et leurs contrats.</p>
+                        <p class="text-center text-gray-500 mb-4 min-h-[3rem]">Pour les PME qui veulent optimiser leurs coûts et leurs contrats.</p>
                         <p class="text-5xl font-bold text-center my-4">69<span class="text-lg font-normal text-gray-500">$/mois</span></p>
                         <ul class="space-y-4 flex-grow text-sm">
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Jusqu'à <strong class="font-semibold">25 employés</strong></span></li>
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Taux horaires individuels</span></li>
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Contrats d'heures (min/max)</span></li>
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Analyse de coûts précise</span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Jusqu'à <strong class="font-semibold">25 employés</strong></span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Taux horaires individuels</span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Contrats d'heures (min/max)</span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Analyse de coûts précise</span></li>
                         </ul>
-                        <a href="#" class="mt-8 w-full text-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-black">Choisir Essentiel</a>
+                        <a href="#" class="mt-auto pt-6 w-full text-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-black">Lancer l'application</a>
                     </div>
+                    <!-- Plan Pro -->
                     <div class="border-2 border-indigo-600 rounded-lg p-8 flex flex-col shadow-2xl relative transition hover:scale-105">
                         <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-4 self-center">RECOMMANDÉ</span>
                         <h3 class="text-2xl font-bold text-center text-indigo-600">Pro</h3>
-                        <p class="text-center text-gray-500 mb-4 h-12">La solution ultime pour les horaires complexes et la gestion des compétences.</p>
+                        <p class="text-center text-gray-500 mb-4 min-h-[3rem]">La solution ultime pour les horaires complexes et la gestion des compétences.</p>
                         <p class="text-5xl font-bold text-center my-4">249<span class="text-lg font-normal text-gray-500">$/mois</span></p>
                         <ul class="space-y-4 flex-grow text-sm">
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span><strong class="font-semibold">Illimité</strong> en employés</span></li>
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Toutes les fonctionnalités Essentiel</span></li>
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span><strong class="font-semibold">Planification par Compétences</strong></span></li>
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span><strong class="font-semibold">Moteur Quantique Hybride</strong></span></li>
-                            <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Stratégies (Coût/Satisfaction)</span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span><strong class="font-semibold">Illimité</strong> en employés</span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Toutes les fonctionnalités Essentiel</span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span><strong class="font-semibold">Planification par Compétences</strong></span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span><strong class="font-semibold">Moteur Quantique Hybride</strong></span></li>
+                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-500 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Stratégies (Coût/Satisfaction)</span></li>
                         </ul>
-                        <a href="#" class="mt-8 w-full text-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">Choisir Pro</a>
+                        <a href="#" class="mt-auto pt-6 w-full text-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">Lancer l'application</a>
                     </div>
+                     <!-- Plan Entreprise -->
                     <div class="border rounded-lg p-8 flex flex-col bg-gray-800 text-white transition hover:shadow-lg">
                         <h3 class="text-2xl font-bold text-center">Entreprise</h3>
-                        <p class="text-center text-gray-400 mb-4 h-12">Pour les défis uniques qui nécessitent une solution sur mesure.</p>
+                        <p class="text-center text-gray-400 mb-4 min-h-[3rem]">Pour les défis uniques qui nécessitent une solution sur mesure.</p>
                         <p class="text-5xl font-bold text-center my-4">Sur<span class="text-lg font-normal text-gray-400"> soumission</span></p>
                         <ul class="space-y-4 flex-grow text-sm">
                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-400 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Modélisation de contraintes uniques (ressources, véhicules, etc.)</span></li>
                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-400 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Développement et intégration sur mesure</span></li>
                             <li class="flex items-start"><svg class="h-5 w-5 text-indigo-400 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg><span>Support et consultation dédiés</span></li>
                         </ul>
-                        <a href="mailto:contact@solutionquantic.com" class="mt-8 w-full text-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">Parler à un expert</a>
+                        <a href="mailto:info@solutionquantic.com" class="mt-auto pt-6 w-full text-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">Parler à un expert</a>
                     </div>
                 </div>
             </div>
@@ -155,52 +161,139 @@
                   </p>
              </div>
         </section>
+
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 max-w-2xl text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white">Entrons en <span class="gradient-text">contact</span></h2>
+                 <p id="contact-intro" class="text-gray-400 mt-4 text-lg mb-12">
+                     Une question ? Un projet en tête ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+                 </p>
+                 <div id="contact-form-container">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="sr-only">Nom</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom" class="form-input w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Courriel</label>
+                            <input type="email" id="email" name="email" required placeholder="Votre courriel" class="form-input w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Votre message..." class="form-input w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full text-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                                Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                 </div>
+                 <div id="confirmation-message" class="hidden text-white text-center p-8 bg-gray-800 rounded-lg">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">Merci !</h3>
+                    <p class="text-gray-300">Votre message a été préparé. Vous allez être redirigé vers votre application de messagerie pour finaliser l'envoi.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
     
     <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 text-center text-gray-400">
+        <div class="container mx-auto px-6 text-center text-gray-400 border-t border-gray-800 pt-8">
             <p>&copy; 2025 Solution Quantic. Tous droits réservés.</p>
              <p class="text-xs mt-2">Créé avec passion à Lévis, Québec.</p>
         </div>
     </footer>
 
     <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('hero-canvas'), alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        const particlesCount = 5000;
-        const positions = new Float32Array(particlesCount * 3);
-        for(let i = 0; i < particlesCount * 3; i++) { positions[i] = (Math.random() - 0.5) * 20; }
-        const particlesGeometry = new THREE.BufferGeometry();
-        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        
-        const particlesMaterial = new THREE.PointsMaterial({ 
-            size: 0.02, 
-            color: new THREE.Color("rgb(79, 70, 229)"), 
-            transparent: true, 
-            blending: THREE.AdditiveBlending 
-        });
-        
-        const particleSystem = new THREE.Points(particlesGeometry, particlesMaterial);
-        scene.add(particleSystem);
-        camera.position.z = 5;
-        const mouse = new THREE.Vector2();
-        window.addEventListener('mousemove', (event) => { mouse.x = (event.clientX / window.innerWidth) * 2 - 1; mouse.y = -(event.clientY / window.innerHeight) * 2 + 1; });
-        function animate() {
-            requestAnimationFrame(animate);
-            particleSystem.rotation.y += 0.0002;
-            const targetRotationX = mouse.y * 0.1;
-            const targetRotationY = mouse.x * 0.1;
-            particleSystem.rotation.x += (targetRotationX - particleSystem.rotation.x) * 0.02;
-            particleSystem.rotation.y += (targetRotationY - particleSystem.rotation.y) * 0.02;
-            renderer.render(scene, camera);
-        }
-        animate();
-        window.addEventListener('resize', () => { 
-            camera.aspect = window.innerWidth / window.innerHeight; 
-            camera.updateProjectionMatrix(); 
-            renderer.setSize(window.innerWidth, window.innerHeight); 
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Animation Three.js pour le Hero ---
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('hero-canvas'), alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            
+            const particlesCount = 5000;
+            const positions = new Float32Array(particlesCount * 3);
+            for(let i = 0; i < particlesCount * 3; i++) {
+                positions[i] = (Math.random() - 0.5) * 20;
+            }
+            const particlesGeometry = new THREE.BufferGeometry();
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            
+            const particlesMaterial = new THREE.PointsMaterial({ 
+                size: 0.02, 
+                color: new THREE.Color("rgb(79, 70, 229)"), 
+                transparent: true, 
+                blending: THREE.AdditiveBlending 
+            });
+            
+            const particleSystem = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particleSystem);
+            camera.position.z = 5;
+
+            const mouse = new THREE.Vector2();
+            window.addEventListener('mousemove', (event) => {
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            });
+
+            function animate() {
+                requestAnimationFrame(animate);
+                particleSystem.rotation.y += 0.0002;
+                const targetRotationX = mouse.y * 0.1;
+                const targetRotationY = mouse.x * 0.1;
+                particleSystem.rotation.x += (targetRotationX - particleSystem.rotation.x) * 0.02;
+                particleSystem.rotation.y += (targetRotationY - particleSystem.rotation.y) * 0.02;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            window.addEventListener('resize', () => { 
+                camera.aspect = window.innerWidth / window.innerHeight; 
+                camera.updateProjectionMatrix(); 
+                renderer.setSize(window.innerWidth, window.innerHeight); 
+            });
+
+            // --- Logique de soumission du formulaire de contact ---
+            const contactFormContainer = document.getElementById('contact-form-container');
+            const contactForm = document.getElementById('contact-form');
+            const confirmationMessage = document.getElementById('confirmation-message');
+            const contactIntro = document.getElementById('contact-intro');
+            
+            if(contactForm) {
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Empêche le rechargement de la page
+
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+
+                    // Cacher le formulaire et le texte d'intro
+                    contactFormContainer.classList.add('hidden');
+                    contactIntro.classList.add('hidden');
+
+                    // Afficher le message de confirmation
+                    confirmationMessage.classList.remove('hidden');
+
+                    // Préparer le lien mailto
+                    const subject = `Nouveau message de ${name} via SolutionQuantic.com`;
+                    const body = `Nom: ${name}\nCourriel: ${email}\n\nMessage:\n${message}`;
+                    const mailtoLink = `mailto:info@solutionquantic.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
+                    // Rediriger après un court délai pour que l'utilisateur puisse lire le message
+                    setTimeout(() => {
+                        window.location.href = mailtoLink;
+                        // Optionnellement, ré-afficher le formulaire après un plus long délai
+                        setTimeout(() => {
+                            contactFormContainer.classList.remove('hidden');
+                            contactIntro.classList.remove('hidden');
+                            confirmationMessage.classList.add('hidden');
+                            contactForm.reset();
+                        }, 5000); // Ré-affiche le formulaire après 5 secondes
+                    }, 2500); // 2.5 secondes de délai
+                });
+            }
         });
     </script>
 </body>
